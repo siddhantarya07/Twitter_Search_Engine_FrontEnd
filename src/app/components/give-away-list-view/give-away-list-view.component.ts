@@ -26,9 +26,7 @@ export class GiveAwayListViewComponent implements OnInit {
       && this.getGiveawaysService.searchKeyValue == null){
         this.router.navigate(['./home']);
   }
-
   this.selectionKeyIndex = this.getGiveawaysService.searchKeyIndex;
-  
   // Get the tweets data
     this.getGiveawaysService.getTweetsBasedOnIndex().subscribe(
        response =>{

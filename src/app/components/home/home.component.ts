@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit {
     console.log(this.searchBox);
     console.log(this.selectionValue);
     if(this.searchBox == null || this.selectionValue == null){
-      alert("Please fill all the required fields!")
+      alert("Please enter all the required fields!")
     }
     else{
       this.getGiveawaysService.searchKeyIndex = this.selectionValue;
