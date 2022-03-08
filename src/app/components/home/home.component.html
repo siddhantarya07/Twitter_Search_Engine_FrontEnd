@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <img class="giveaway-image" src="/assets/Main_wallpaper.png" alt="No Image Found">
+      </div>
+      <div class="col"></div>
+    </div>
+  
+    <div class="row">
+      <div class="col search-textBox">
+        <i class="bi bi-search"></i>
+        <input id="myInput" placeholder="Search Giveaways..." type="text" class="custom-input-search" name="SearchBox" [(ngModel)]="searchBox">
+      </div>
+    </div>
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <div class="custom-radio-button">
+        <input type="radio" class="radio" name="searchMethod" value="lucene" id="lucenex" [(ngModel)]="selectionValue"checked />
+        <label class="custom-label" for="lucenex">Lucene</label>
+        <input type="radio" class="radio" name="searchMethod" value="hadoop" [(ngModel)]="selectionValue" id="hadoopy" />
+        <label class="custom-label" for="hadoopy">Hadoop</label>
+      </div>
+    </div>
+    <div class="col"></div>
+  </div>
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <button class="search-button" (click)="loadGiveAwayLists()">Search</button>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>

@@ -1,0 +1,63 @@
+<div class="container container-margin">
+    <table>
+        <thead></thead>
+        <tbody>
+            <tr>
+                <td class="user-img">
+                    <img class="user-image" src="/assets/Twitter.png" alt="No Image Found">
+                </td>
+                <td>
+                    <div class="tweet-details">
+                        <div>
+                            <span>
+                                <b>{{individualTweet.user_name}}</b>
+                                <span *ngIf="individualTweet.verified == 0;then verifiedContent">
+                                </span>
+                                <ng-template #verifiedContent>
+                                    <i class="bi bi-check-circle-fill user-inline-style"></i>
+                                </ng-template>
+                            </span>
+                            
+                            <p class="small-font">{{individualTweet.posted_at}} || Tweet Id: {{individualTweet.tweet_id}}
+                                || User Id: {{individualTweet.user_id}}
+                            </p>
+                            <p class="p-margin">{{individualTweet.processed_tweet}}</p>
+                        </div>
+                        <div class="">
+                            <table>
+                                <thead></thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="td-width">
+                                            <i class="bi bi-suit-heart-fill inline-style"></i>
+                                            <p class="inline-style margin-style medium-font">Likes: {{individualTweet.like_count}}</p>
+                                        </td>
+                                        <td class="td-width">
+                                            <i class="bi bi-person-plus-fill inline-style"></i>
+                                            <p class="inline-style margin-style medium-font">Followers Count: {{individualTweet.followers_count}}</p>
+                                        </td>
+                                        <td class="td-width">
+                                            <i class="bi bi-chat-left-fill inline-style"></i>
+                                            <p class="inline-style margin-style medium-font">Tweets Count: {{individualTweet.tweets_count}}</p>  
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-width">
+                                            <i class="bi bi-chat-left-dots-fill inline-style"></i>
+                                            <p class="inline-style margin-style medium-font">Retweet Count: {{individualTweet.retweet_count}}</p>
+                                        </td>
+                                        <td class="td-width">
+                                            <i class="bi bi-card-text inline-style"></i>
+                                            <p class="inline-style margin-style medium-font">Listed Count: {{individualTweet.listed_count}}</p>
+                                        </td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
