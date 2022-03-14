@@ -16,6 +16,7 @@
                                 <ng-template #verifiedContent>
                                     <i class="bi bi-check-circle-fill user-inline-style"></i>
                                 </ng-template>
+                                <b class="score-right">Overall Setiment: {{individualTweet.sentiment.overall}}</b>
                             </span>
                             
                             <p class="small-font">{{individualTweet.posted_at}} || Tweet Id: {{individualTweet.tweet_id}}
@@ -24,7 +25,7 @@
                             <p class="p-margin">{{individualTweet.tweet}}</p>
                         </div>
                         <div class="">
-                            <table>
+                            <table class="table-align">
                                 <thead></thead>
                                 <tbody>
                                     <tr>
@@ -53,6 +54,20 @@
                                         <td>
                                             <i class="bi bi-calculator inline-style"></i>
                                             <p class="inline-style margin-style medium-font">Score: {{individualTweet.score}}</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-width">
+                                            <i class="bi bi-emoji-smile inline-style"></i>
+                                            <p class="inline-style margin-style medium-font">Positive Score: {{individualTweet.sentiment.positive}}</p>
+                                        </td>
+                                        <td class="td-width">
+                                            <i class="bi bi-emoji-frown inline-style"></i>
+                                            <p class="inline-style margin-style medium-font">Negative Score: {{individualTweet.sentiment.negative}}</p>
+                                        </td>
+                                        <td>
+                                            <i class="bi bi-emoji-neutral inline-style"></i>
+                                            <p class="inline-style margin-style medium-font">Neutral Score: {{individualTweet.sentiment.neutral}}</p>
                                         </td>
                                     </tr>
                                 </tbody>

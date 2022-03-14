@@ -40,3 +40,12 @@
 .medium-font{
     font-size: 0.8rem;
 }
+.score-right{
+    float: right;
+    font-size: 0.7rem;
+    margin-top: 0.85vh;
+    color: rgb(12, 157, 241);
+}
+.table-align{
+    width: 100%;
+}

@@ -13,7 +13,8 @@ export class GiveAwayListViewComponent implements OnInit {
   sampleData:any;
   tweetListData:any;
   searchResultsCount :any;
-  selectionKeyIndex =""
+  selectionKeyIndex ="";
+  resultsSearchedTime ="";
   @ViewChild('loginErrorModal') sample:any;
  
   constructor(
@@ -33,6 +34,7 @@ export class GiveAwayListViewComponent implements OnInit {
         this.tweetListData = response;
         if(this.tweetListData.length >0){
           this.searchResultsCount = this.tweetListData.length;
+          this.resultsSearchedTime = this.tweetListData[0].search_time;
          }
         console.log(this.tweetListData);
        } );
