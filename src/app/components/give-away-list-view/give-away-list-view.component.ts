@@ -14,6 +14,7 @@ export class GiveAwayListViewComponent implements OnInit {
   tweetListData:any;
   searchResultsCount :any;
   selectionKeyIndex ="";
+  searchedKeyValue = ""
   resultsSearchedTime ="";
   @ViewChild('loginErrorModal') sample:any;
  
@@ -28,6 +29,7 @@ export class GiveAwayListViewComponent implements OnInit {
         this.router.navigate(['./home']);
   }
   this.selectionKeyIndex = this.getGiveawaysService.searchKeyIndex;
+  this.searchedKeyValue = this.getGiveawaysService.searchKeyValue; 
   // Get the tweets data
     this.getGiveawaysService.getTweetsBasedOnIndex().subscribe(
        response =>{
