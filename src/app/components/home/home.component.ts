@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
 import { GetGiveawaysService } from '../../services/get-giveaways/get-giveaways.service'
+import { GetTestService } from '../../services/get-test/get-test.service'
 
 @Component({
   selector: 'app-home',
@@ -14,13 +14,20 @@ export class HomeComponent implements OnInit {
   selectionValue:any;
   constructor(
     private router:Router,
-    private getGiveawaysService:GetGiveawaysService) { }
+    private getGiveawaysService:GetGiveawaysService,
+    private getTestService:GetTestService) { }
 
   ngOnInit(): void {
+    this.getTestService.getTest().subscribe(
+      response =>{ });
   }
   loadGiveAwayLists(){
     console.log(this.searchBox);
     console.log(this.selectionValue);
+    // this.getTestService.getTest().subscribe(
+    //   response =>{
+    //    console.log(response);
+    //   });
     if(this.searchBox == null || this.selectionValue == null){
       alert("Please enter all the required fields!")
     }
