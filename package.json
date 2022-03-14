@@ -42,7 +42,7 @@
     "heroku-postbuild": "ng build — prod"
   },
   "engines": 
-  { "node": "x.x.x", 
-    "npm": "x.x.x" 
+  { "node": "14.8.1", 
+    "npm": "6.14.5" 
   }
 }
