@@ -58,6 +58,12 @@
     padding: 0px 1em 0px 8px;
     font-size: 1rem;
   }
+  .group-label{
+    font-size: 1rem;
+    margin-top: 0.85vh;
+    color: rgb(12, 157, 241);
+    margin-left: 10vw;
+  }
   
   input[type=radio],
   input.radio {
